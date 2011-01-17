@@ -1,0 +1,3 @@
+rgMailHide : a simple eZ Publish wrapper extension for reCAPTCHA Mailhide.
+
+reCAPTCHA Mailhide helps you protect your inbox by asking people to solve a reCAPTCHA before they can view your email address.
