@@ -1,0 +1,37 @@
+Autocomplete on eZ Keyword datatype - Installation procedure
+=============================================================
+
+
+Setup
+-----
+
+
+* Place the freshly checked out extension/rgmailhide extension in your extension folder.
+* Generate reCAPTCHA Mailhide API key freely here : http://mailhide.recaptcha.net/apikey
+and paste your pub / private keys into the keys array already defined in ./extension/rgmailhide/site.ini.append.php
+* Activate the extension. This can typically be done in settings/override/site.ini.append.php, as shown below
+
+::
+
+  [ExtensionSettings]
+  (...)
+  ActiveExtensions[]=rgmailhide
+
+
+* clear all caches ( or more granularily ). You can do so by running, from eZ Publish's root folder, in a command line prompt : 
+
+::
+
+ php bin/php/ezcache.php -s<siteaccess_name> --clear-all
+  
+Where <siteaccess_name> is the name of a siteaccess using the content ( DB + var directory ) you are enabling the extension for.
+
+* WARNING : this extension is based on the template fallback system. The view template for link ezxmltag is overridden. If you already did so, make sure the hereby provided template is loaded first.
+This can often be achieved by declaring the rgmailhide extension before your extension in the ActiveExtensions[] configuration array.
+
+Testing & Usage
+---------------
+* edit an object and create a 'mailto' link.
+* As an anonymous user, have a look at your frontend siteaccess, see how looks your mailto link and how reCAPTCHA challenge works.
+* Login into frontend siteaccess and see how it looks now : no reCAPTCHA challenge is required as far as your are logged in. 
+* If reCaptcha Mailhide doesn't work for you, check that your are not logged in, check your PHP installation is => 5.2 , check your API key, clear all caches, or check reCaptcha wiki

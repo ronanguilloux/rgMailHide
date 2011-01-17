@@ -1,3 +1,33 @@
-rgMailHide : a simple eZ Publish wrapper extension for reCAPTCHA Mailhide.
+rgMailHide README
+================
 
-reCAPTCHA Mailhide helps you protect your inbox by asking people to solve a reCAPTCHA before they can view your email address.
+Description
+-----------
+
+rgMailHide is a simple eZ Publish wrapper extension for reCAPTCHA Mailhide.
+
+reCAPTCHA Mailhide helps you protect your inbox by asking people to solve 
+a reCAPTCHA challenge before they can view any email address 
+managed by the content management system of eZ Publish.
+It uses reCAPTCHA API but it does not need you to sign up to reCaptcha.net, 
+as far as reCAPTCHA Mailhide API key can be freely generated here : 
+http://mailhide.recaptcha.net/apikey
+
+Features
+--------
+
+* The reCAPTCHA can only be solved by humans, so this stops spammers from gaining access to published email addresses through automated programs.
+* With rgMailHide extension, id, css, classes, title, hreflang are ok. 
+* no reCAPTCHA challenge is required as far as your are logged in !
+
+License compatibility
+---------------------
+The reCAPTCHA PHP Lirary is under MIT Expat License.
+This license is GPL-compatible, meaning that the GPL permits combination and redistribution with this software.
+You can read more about that at http://www.gnu.org/licenses/license-list.html#Expat
+
+reCAPTCHA README
+================
+
+The reCAPTCHA PHP Lirary helps you use the reCAPTCHA API. Documentation
+for this library can be found at http://code.google.com/intl/fr/apis/recaptcha/docs/php.html
